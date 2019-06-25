@@ -1,5 +1,5 @@
 var TodoItemView = Backbone.View.extend({
-    tageName: 'li',
+    tagName: 'li',
     initialize: function(options) {
         if(!(options && options.model)) {
             throw new Error('model is not specified');
@@ -7,7 +7,7 @@ var TodoItemView = Backbone.View.extend({
     },
     
     render: function() {
-        this.$el.html(this.model.get('description'));
+        this.$el.html(this.model.escape('description'));
 
         return this;
     }
