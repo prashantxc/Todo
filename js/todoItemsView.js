@@ -45,8 +45,8 @@ var TodoItemsView = Backbone.View.extend({
     render: function() {
         var self = this;
 
-        this.$el.append('<input type="text" id="newTodoItem" autofocus></input>');
-        this.$el.append('<button id="add">Add</button>');
+        this.$el.append('<input type="text" class="form-control form-control-sm" id="newTodoItem" autofocus></input>');
+        this.$el.append('<button id="add" class="btn btn-success btn-sm">Add</button>');
 
         this.model.each(function(todoItem) {
             var view = new TodoItemView({ model: todoItem });

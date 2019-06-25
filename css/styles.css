@@ -4,6 +4,11 @@ body {
 
 body, p { font-size: 24px; }
 
+ul#todoItems {
+	list-style-type: none;
+	max-width: 90%;
+}
+
 .completed {
 	text-decoration: line-through;
 }
