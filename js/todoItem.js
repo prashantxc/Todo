@@ -3,15 +3,15 @@ var TodoItem = Backbone.Model.extend({
         isCompleted: false
     },
 
-    url: 'fakeURL',
+    urlRoot: 'https://jsonplaceholder.typicode.com/todos',
 
     validate: function(attrs) {
-        if(!attrs.description) {
+        if(!attrs.title) {
             return 'Description is required.';
         }
     },
 
     toggle: function() {
-        this.set('isCompleted', !this.get('isCompleted'));
+        this.set('completed', !this.get('completed'));
     }
 });
